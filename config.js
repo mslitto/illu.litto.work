@@ -130,6 +130,6 @@ module.exports = {
     env: env,
     menuItems: menuItems,
     dirs: server.dirs,
-    images: images,
+    // images: images,
   },
 };
