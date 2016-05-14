@@ -54,9 +54,6 @@ body
   font-size 14px
   line-height 1
 
-h1, h2, h3, h4, h5
-  color $a-color
-
 a
   color $a-color
   text-decoration none
@@ -70,7 +67,7 @@ h1
   padding 0 0 1em
 
 h2
-  font-size 3.4em
+  font-size 2em
   text-transform uppercase
 
 h3
@@ -92,7 +89,7 @@ h2
 
 h3,
 a
-  font-family Ubuntu, sans-serif;
+  font-family Ubuntu, sans-serif
   font-style italic
 
 header.main,
@@ -104,7 +101,6 @@ footer.main
   width 100vw
 
 header.main
-  background url(/img/header-bg.jpg)
   display inline-block
   text-align center
   height auto
@@ -125,15 +121,14 @@ header.main
     margin -3em auto 0
     max-width 80%
 
-
   div.description
     display block
     font-size 2em
+    font-style italic
+    line-height 1.2em
     margin 2em auto
     max-width 80%
-    font-style italic
     text-align center
-    line-height 1.2em
 
     p
       margin 0 0 .5em
@@ -153,75 +148,85 @@ footer.main
     text-align center
     width 100%
 
+#wrapper
+  background-image url(/img/header-bg.jpg)
+  background-size cover
+
 section
-  display block
+  display inline-flex
   width 100vw
   max-width 100%
   text-align center
+  padding 3em 0
 
-  &.image
-    &.color-1
-      background-color $pastell-color-1
-    &.color-2
-      background-color $pastell-color-3
-    &.color-3
-      background-color $pastell-color-2
-    &.color-4
-      background-color $pastell-color-4
+  // &.image
+  //   &.color-1
+  //     background-color $pastell-color-1
+  //   &.color-2
+  //     background-color $pastell-color-3
+  //   &.color-3
+  //     background-color $pastell-color-2
+  //   &.color-4
+  //     background-color $pastell-color-4
 
-  /*
-  &:nth-child(even)
-    img
-      float left
-    .text
-      float right
-
-  &:nth-child(odd)
-    img
-      float right
-    .text
-      float left
-  */
+  .description
+    text-align center
+    margin 1em 0 0
 
   .margin-wrapper
-    max-width 1000px
-    margin 0 auto
-    position relative
     display block
+    margin 0 auto
+    max-width 1000px
+    min-width 50%
+    position relative
 
 div.image-container
-  img
-    max-height 100vh
-    max-width 100%
+  h2
+    font-style italic
+
+  div.img
+    display inline-block
+    position relative
+
+    img
+      max-height 100vh
+      max-width 100%
+
+      &:last-child
+        left 0
+        position absolute
+        top 0
 
 .button-container
   bottom 1em
-  right 1em
-  top auto
   left auto
+  right 1em
   position fixed
+  top auto
 
   a
     border-left 20px solid transparent
     border-right 20px solid transparent
+    cursor pointer
     display block
     height 0
-    width 0
     margin 1em 0
-    cursor pointer
+    width 0
 
     &.up
       border-bottom 20px solid $button-background-color
     &.down
       border-top 20px solid $button-background-color
-/*
+
 @media (min-width 400)
   section
     &:nth-child(even)
-      img
+      div.img
         float left
-
-    &:nth-child(odd)
-      img
+      .description
         float right
-*/
+    &:nth-child(odd)
+      div.img
+        float right
+      .description
+        float left

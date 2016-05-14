@@ -1,5 +1,21 @@
 extends ../layout
 
+mixin imageSection(colorId, image)
+  section(id='image-' + image.id class='image color-' + colorId)
+    div.margin-wrapper
+      if image && image.src
+        div.img
+          img(src='/img/people/' + image.src)
+          img(src='/img/image-border.png')
+
+        div.description
+          if image.title
+            h2= '“' + image.title + '”'
+
+          p 42cm x 29,7cm
+          p lithography, pen, tip-ex
+          p 2016
+
 block title
   title litto.work - catalog
 
@@ -21,7 +37,80 @@ block content
         | so I used it to produce a series of artworks that express some parts of my personality.
 
   div.image-container
-    - var colorId = 0
+    -
+      var colorId = 0
+      var images = [
+        {
+          id: '01',
+          title: 'quick download',
+          src: '01.jpg',
+        },
+        {
+          id: '02',
+          title: 'prepare myself for ...',
+          src: '02.jpg',
+        },
+        {
+          id: '03',
+          title: 'commuting time',
+          src: '03.jpg',
+        },
+        {
+          id: '04',
+          title: 'night shifting',
+          src: '04.jpg',
+        },
+        {
+          id: '05',
+          title: 'defiant',
+          src: '05.jpg',
+        },
+        {
+          id: '06',
+          title: 'wasting time',
+          src: '06.jpg',
+        },
+        {
+          id: '07',
+          title: 'I don\'t care',
+          src: '07.jpg',
+        },
+        {
+          id: '08',
+          title: 'wake up too early',
+          src: '08.jpg',
+        },
+        {
+          id: '09',
+          title: 'dressed up',
+          src: '09.jpg',
+        },
+        {
+          id: '10',
+          title: 'feel the bass',
+          src: '10.jpg',
+        },
+        {
+          id: '11',
+          title: 'mistaken',
+          src: '11.jpg',
+        },
+        {
+          id: '12',
+          title: 'think out of the box',
+          src: '12.jpg',
+        },
+        {
+          id: '13',
+          title: 'last in first out',
+          src: '13.jpg',
+        },
+        {
+          id: '14',
+          title: 'dance your heart out',
+          src: '14.jpg',
+        },
+      ]
 
     for image in images
       -
@@ -30,16 +119,14 @@ block content
           colorId = 1;
         }
 
-      section(id='image-' + image.id class='image color-' + colorId)
-        div.margin-wrapper
-          img(src='/img/people/' + image.src)
+      +imageSection(colorId, image)
 
   footer.main
     div.content
       h3 Impressum
 
       h4 Artist & Design
-      p Litto = Daniela Weiss
+      p Litto is Daniela Weiss
 
       h4 Programming
       p Jascha Ehrenreich
