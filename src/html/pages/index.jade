@@ -1,7 +1,7 @@
 extends ../layout
 
-mixin imageSection(colorId, image)
-  section(id='image-' + image.id class='image color-' + colorId)
+mixin imageSection(image)
+  section(id='image-' + image.id class='image')
     div.margin-wrapper
       if image && image.src
         div.img
@@ -38,7 +38,6 @@ block content
 
   div.image-container
     -
-      var colorId = 0
       var images = [
         {
           id: '01',
@@ -110,16 +109,15 @@ block content
           title: 'dance your heart out',
           src: '14.jpg',
         },
+        {
+          id: '15',
+          title: 'image 15 title',
+          src: '15.jpg',
+        },
       ]
 
     for image in images
-      -
-        colorId += 1;
-        if (colorId === 4) {
-          colorId = 1;
-        }
-
-      +imageSection(colorId, image)
+      +imageSection(image)
 
   footer.main
     div.content
