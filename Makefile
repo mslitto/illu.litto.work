@@ -5,6 +5,9 @@
 
 all: dev
 
+clean:
+	rm -r ./out
+
 build:
 	gulp build
 
