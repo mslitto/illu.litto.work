@@ -5,13 +5,13 @@
   <block name="content">
     <div id="logo">
       <a href="http://www.litto.work">
-        <img src="/img/logo.png">
+        <img src="{{ WEB_ROOT }}img/logo.png">
       </a>
     </div>
 
     <header class="main">
       <div>
-        <img src="/img/cover.jpg">
+        <img src="{{ WEB_ROOT }}img/cover.jpg">
       </div>
 
       <h1>
@@ -35,8 +35,8 @@
         <section id="image-{{ id }}" class="image">
           <div class="margin-wrapper">
             <div class="img">
-              <img src="/img/people/littography_{{id < 9 ? `0${id + 1}` : id + 1}}.jpg">
-              <img src="/img/image-border.png">
+              <img src="{{ WEB_ROOT }}img/people/littography_{{id < 9 ? `0${id + 1}` : id + 1}}.jpg">
+              <img src="{{ WEB_ROOT }}img/image-border.png">
             </div>
           </div>
           <div class="description">
