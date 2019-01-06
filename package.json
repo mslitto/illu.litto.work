@@ -1,26 +1,28 @@
 {
-  "name": "jaeh.at",
+  "name": "illu.litto.work",
   "version": "0.0.1",
   "description": "my personal homepage page, built using magic",
   "main": "index.js",
   "scripts": {
-    "start": "gulp",
-    "production": "NODE_ENV='production' gulp"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jaeh/jaeh.at.git"
+    "start": "mspg build serve watch",
+    "build": "NODE_ENV=production mspg build zip",
+    "build:serve": "NODE_ENV=production mspg build serve zip",
+    "clean": "rm -rf public",
+    "lint:css": "mspg lint css",
+    "lint:html": "mspg lint html",
+    "connect": "mspg connect",
+    "publish": "NODE_ENV=production mspg publish",
+    "format": "f -w"
   },
   "author": "Jascha Ehrenreich <jascha@jaeh.at>",
   "license": "AGPL-3.0",
-  "bugs": {
-    "url": "https://github.com/jaeh/jaeh.at/issues"
+  "devDependencies": {
+    "@mspg/core": "github:mspg/core",
+    "@mspg/transpile-babel": "github:mspg/transpile-babel",
+    "@mspg/transpile-posthtml": "github:mspg/transpile-posthtml",
+    "@mspg/transpile-stylus": "github:mspg/transpile-stylus"
   },
-  "homepage": "http://wizardsat.work",
   "dependencies": {
-    "gulp": "^3.9.0",
-    "builder": "magic/builder",
-    "page": "^1.6.3",
-    "utils": "magic/utils"
+    "@magic/test": "0.0.2"
   }
 }

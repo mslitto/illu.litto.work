@@ -1,0 +1,69 @@
+<extends src="page.html">
+  <block name="title">
+    <title>litto.work - catalog</title>
+  </block>
+  <block name="content">
+    <div id="logo">
+      <a href="http://www.litto.work">
+        <img src="/img/logo.png">
+      </a>
+    </div>
+
+    <header class="main">
+      <div>
+        <img src="/img/cover.jpg">
+      </div>
+
+      <h1>
+        Litto-
+        <br>
+        graphie
+      </h1>
+
+      <div class="description">
+        <p>It started with a simple picture in front of the mirror, naked.</p>
+        <p>
+          I realised I spent way too much time on a selfie,
+          <br>
+          so I used it to produce a series of artworks that express some parts of my personality.
+        </p>
+      </div>
+    </header>
+
+    <div class="image-container">
+      <each loop="title, id in ['quick download', 'prepare myself for ...', 'commuting time', 'night shifting', 'defiant', 'wasting time', 'I don\'t care', 'wake up too early', 'dressed up', 'feel the bass', 'mistaken', 'think out of the box', 'last in first out', 'dance your heart out', 'discharged',]">
+        <section id="image-{{ id }}" class="image">
+          <div class="margin-wrapper">
+            <div class="img">
+              <img src="/img/people/littography_{{id < 9 ? `0${id + 1}` : id + 1}}.jpg">
+              <img src="/img/image-border.png">
+            </div>
+          </div>
+          <div class="description">
+            <h2>“{{ title }}”</h2>
+
+            <p>40cm x 50cm</p>
+            <p>lithography, pen, tip-ex</p>
+            <p>2016</p>
+          </div>
+        </section>
+      </each>
+    </div>
+
+    <footer class="main">
+      <div class="content">
+        <h3>Impressum</h3>
+
+        <h4>Artist & Design</h4>
+        <p>Litto is Daniela Weiss</p>
+
+        <h4>Programming</h4>
+        <p>Jascha Ehrenreich</p>
+
+      <div class="copy">
+        <span>&copy; 2016</span>
+        <a href="https://litto.work" target="utopia">Litto</a>
+      </div>
+    </footer>
+  </block>
+</extends>

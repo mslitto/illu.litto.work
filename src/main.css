@@ -1,43 +1,8 @@
 @import nib
 global-reset()
 
-$body-color = #252525
-$body-bg-color = #fefefe
-$a-color = #000a96
-$a-color-hover = #83a599
-
-$logo-background-color = #ddd
-
-$button-background-color = #353535
-
-$pastell-color-1 = #ffff7c
-$pastell-color-2 = #ff6385
-$pastell-color-3 = #00ef91
-
-@font-face
-  font-family Ubuntu
-  font-style normal
-  src url(/font/Ubuntu-C.woff)
-
-@font-face
-  font-family Ubuntu
-  font-style italic
-  src url(/font/Ubuntu-LI.woff)
-
 /* sanity */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video
+*
   box-sizing border-box
 
 html,
@@ -176,21 +141,10 @@ footer.main
     top -35px
 
 section
-  display inline-flex
   width 100vw
   max-width 100%
   text-align center
   padding 3em 0
-
-  // &.image
-  //   &.color-1
-  //     background-color $pastell-color-1
-  //   &.color-2
-  //     background-color $pastell-color-3
-  //   &.color-3
-  //     background-color $pastell-color-2
-  //   &.color-4
-  //     background-color $pastell-color-4
 
   .description
     text-align center
@@ -207,6 +161,7 @@ div.image-container
   h2
     margin 0 0 .5em
     font-style italic
+    font-weight 200
 
   div.img
     display inline-block
@@ -242,15 +197,15 @@ div.image-container
     &.down
       border-top 20px solid $button-background-color
 
-@media (min-width 400)
-  section
-    &:nth-child(even)
-      div.img
-        float left
-      .description
-        float right
-    &:nth-child(odd)
-      div.img
-        float right
-      .description
-        float left
+// @media (min-width 400)
+//   section
+//     &:nth-child(even)
+//       div.img
+//         float left
+//       .description
+//         float right
+//     &:nth-child(odd)
+//       div.img
+//         float right
+//       .description
+//         float left
