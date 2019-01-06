@@ -9,4 +9,5 @@ module.exports = {
     JS,
   },
   WEB_ROOT: '/illu.litto.work/',
+  year: new Date().getFullYear(),
 }
