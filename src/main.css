@@ -1,0 +1,193 @@
+@import nib
+global-reset()
+
+/* sanity */
+*
+  box-sizing border-box
+
+html,
+body
+  display inline-block
+  left 0
+  min-height 100%
+  position absolute
+  top 0
+  width 100%
+
+body
+  background-color $body-bg-color
+  color $body-color
+  font-family Ubuntu, sans-serif
+  font-size 14px
+  line-height 1
+  font-weight 200
+
+a
+  color $a-color
+  text-decoration none
+
+  &:hover
+    color $a-color-hover
+
+h1
+  font-size 6.5em
+  text-transform uppercase
+  padding 0 0 1em
+
+h2
+  font-size 2em
+  text-transform uppercase
+
+h3
+  font-size 1.7em
+
+h4
+  font-size 1em
+  font-style italic
+  margin 1em 0 .3em
+
+footer.menu
+  position fixed
+  right 2px
+  top 2px
+
+h3,
+a
+  font-style italic
+
+header.main,
+footer.main
+  display block
+  height 100vh
+  max-width 100%
+  position relative
+  width 100vw
+
+header.main
+  display inline-block
+  text-align center
+  height auto
+
+  div
+    display inline-block
+    margin 0 auto
+
+  img
+    max-height 100vh
+    display block
+    margin 0 auto
+    max-width 90%
+
+  h1
+    color $body-color
+    font-size 5em
+    margin -2.7em auto 0
+    max-width 740px
+    text-align left
+    width 90%
+
+  div.description
+    display block
+    font-size 2em
+    font-style italic
+    line-height 1.2em
+    margin 2em auto
+    max-width 80%
+    text-align center
+
+    p
+      margin 0 0 .5em
+
+footer.main
+  font-style italic
+  text-align center
+
+  .content
+    display inline-block
+    padding 8em 0 0
+    text-align right
+
+  .copy
+    bottom 5px
+    position absolute
+    text-align center
+    width 100%
+
+#wrapper
+  background-image url(/img/header-bg.jpg)
+  background-size cover
+  padding 0 1em 0
+
+#logo
+  border-bottom-color transparent
+  border-left-color $logo-background-color
+  border-right-color transparent
+  border-style solid
+  border-top-color $logo-background-color
+  border-width 40px
+  left 0
+  position fixed
+  top 0
+  z-index 2
+
+  img
+    height 30px
+    left -35px
+    position absolute
+    top -35px
+
+section
+  width 100vw
+  max-width 100%
+  text-align center
+  padding 3em 0
+
+  .description
+    text-align center
+    margin 1em 0 0
+
+  .margin-wrapper
+    display block
+    margin 0 auto
+    max-width 1000px
+    min-width 50%
+    position relative
+
+div.image-container
+  h2
+    margin 0 0 .5em
+    font-style italic
+
+  div.img
+    display inline-block
+    position relative
+
+    img
+      max-height 100vh
+      max-width 100%
+
+      &:last-child
+        left 0
+        position absolute
+        top 0
+
+.button-container
+  bottom 1em
+  left auto
+  right 1em
+  position fixed
+  top auto
+
+  a
+    border-left 20px solid transparent
+    border-right 20px solid transparent
+    cursor pointer
+    display block
+    height 0
+    margin 1em 0
+    width 0
+
+    &.up
+      border-bottom 20px solid $button-background-color
+    &.down
+      border-top 20px solid $button-background-color
